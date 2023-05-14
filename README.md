@@ -36,7 +36,15 @@ Primero se guardan los datos en buckets de s3, uno para cada fuente:
 
 ![Buckets](https://github.com/manuelarr03/NequiTestDataEngineer/blob/261dbb8dcb146cff66c6b14c6dc393eb7a61e46b/Buckets.png)
 
-se crea el crawler, que apunta los bucket en donde se almacenaron los datos, y la base de datos *db-banks* en la que se almacena la tabla *kg_data_bank* y *db-songs* en la que se almacenan las tablas *music_info* y *user_listening* ( para cada fuente de datos se crea una base de datos ya que no tienen una relacion entre si)
+En Glue - Databases se crean las bases de datos: *db-banks* y *db-songs*, una para cada fuente de información.
+
+
+![Databases](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Databases.png)
+
+se crea el crawler, que apunta los bucket en donde se almacenaron los datos. En la base de datos *db-banks* se almacena la tabla *kg_data_bank* y en *db-songs* se almacenan las tablas *music_info* y *user_listening*.
+
+
+![Crawlers](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Crawlers.png)
 
 Se cambian los formatos de fecha y se eliminan duplicados
 * se guarda la data proceesada en un bucket de s3 parquetisada, se define este formato ya que por ser comprimido se ahorran costos
