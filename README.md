@@ -58,7 +58,11 @@ En este job se procesa la tabla *kg_data_bank* haciendo cambio de formatos en fe
 
 Se crea una ETL job para los datos de *db-songs*, para este caso, se cargan las dos tablas y se procesan al mismo tiempo, se cambian formatos y se hace un inner join entre las dos tablas para obtener una única tabla de salida.
 
-![ETL songs](https://github.com/manuelarr03/NequiTestDataEngineer/blob/256586d0374b402d42a930b0827cf6d35c81ebe9/ELT%20job%20songs.png)
+![ETL songs](https://github.com/manuelarr03/NequiTestDataEngineer/blob/b687503a532bb7392d59596c5ab71d85084131cc/ELT%20job%20songs.png)
+
+El siguiente paso es el almacenamiento de la data, para esto, se crea un nuevo bucket *kg-data-processed* y dentro de el, una carpeta por base de datos. Se alamcena los nuevos datos en formato parquet y comprimido por snappy. Se define este tipo de almacenamiento ya que se ahorran costos por almacenamiento.
+
+![BuketProcessed](https://github.com/manuelarr03/NequiTestDataEngineer/blob/b687503a532bb7392d59596c5ab71d85084131cc/BucketProcessed.png)
 
 ![Data procesada](https://github.com/manuelarr03/NequiTestDataEngineer/blob/256586d0374b402d42a930b0827cf6d35c81ebe9/Data%20procesada.png)
 
