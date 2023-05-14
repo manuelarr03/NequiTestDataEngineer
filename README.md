@@ -52,7 +52,15 @@ El paso siguiente es crear la ETL jobs, en el que se harán las transformaciones
 
 ![ETL Bank](https://github.com/manuelarr03/NequiTestDataEngineer/blob/877741b0344f03b37e7f915512b296186290e331/ELT%20job%20bank.png)
 
-En este job se procesa la tabla *kg_data_bank* haciendo cambio de formatos en fechas y creando una nueva variable *Edad* calculada en un nodo de SQL Query a partir de la variable *CustomerDOB* 
+En este job se procesa la tabla *kg_data_bank* haciendo cambio de formatos en fechas y creando una nueva variable *Edad* calculada en un nodo de SQL Query a partir de la variable *CustomerDOB*.
+
+![Edad](https://github.com/manuelarr03/NequiTestDataEngineer/blob/256586d0374b402d42a930b0827cf6d35c81ebe9/Edad.png)
+
+Se crea una ETL job para los datos de *db-songs*, para este caso, se cargan las dos tablas y se procesan al mismo tiempo, se cambian formatos y se hace un inner join entre las dos tablas para obtener una única tabla de salida.
+
+![ETL songs](https://github.com/manuelarr03/NequiTestDataEngineer/blob/256586d0374b402d42a930b0827cf6d35c81ebe9/ELT%20job%20songs.png)
+
+![Data procesada](https://github.com/manuelarr03/NequiTestDataEngineer/blob/256586d0374b402d42a930b0827cf6d35c81ebe9/Data%20procesada.png)
 
 Se cambian los formatos de fecha y se eliminan duplicados
 * se guarda la data proceesada en un bucket de s3 parquetisada, se define este formato ya que por ser comprimido se ahorran costos
