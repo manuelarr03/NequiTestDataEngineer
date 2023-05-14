@@ -1,7 +1,7 @@
 # NequiTestDataEngineer
 ## Paso 1: Captura de datos
 
-*Base de datos 1:* 'bank_transactions.csv' tomado de https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation 
+**Base de datos 1:** 'bank_transactions.csv' tomado de https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation 
 Este archivo contiene las transacciones realizadas por al menos 800 mil clientes de un banco en la India. Los datos contienen información detallada de cada transacción como el identificador, la fecha de la transacción, el saldo y algunos datos adicionales del cliente como fecha de nacimiento, genero y ubicación.
 
 Esta base de datos puede ser usada para segmentar los clientes según su perfil y comportamiento, identifficar posibles transacciones fraudulentas y/o predecir cantidad de transacciones en un determinado período de tiempo.
