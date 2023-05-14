@@ -66,13 +66,11 @@ El siguiente paso es el almacenamiento de la data, para esto, se crea un nuevo b
 
 ![Data procesada](https://github.com/manuelarr03/NequiTestDataEngineer/blob/256586d0374b402d42a930b0827cf6d35c81ebe9/Data%20procesada.png)
 
-Se cambian los formatos de fecha y se eliminan duplicados
-* se guarda la data proceesada en un bucket de s3 parquetisada, se define este formato ya que por ser comprimido se ahorran costos
 ## Paso 5: Completar la redacción del proyecto
 
 El objetivo del proyecto es la construcción de un modelo y una arquitectura eficiente para que los datos puedan ser consumidos.  
 
-* Si los datos se incrementaran en 100x. sería buena opcion particionar la data ya que las consultas a bases particionadas son mucho más rápidas y efectivas, se tiene mayor escalabilidad en el almacenamiento y reduce costos por optimización de almacenamiento. O utilizar el servicio de AWS Redshift que permite almacenar y analizar grandes cantidades de datos. 
+* Si los datos se incrementaran en 100x. sería buena opcion particionar la data ya que las consultas a bases particionadas son mucho más rápidas y efectivas, se tiene mayor escalabilidad en el almacenamiento y reduce costos por optimización de almacenamiento. O utilizar el servicio de AWS Redshift que permite la creación de un data warehouse y analizar grandes cantidades de datos. 
 
 * Si se requiere hacer analítica en tiempo real, ¿cuales componentes cambiaria a su
-arquitectura propuesta? Cambiaría el almacenamiendo de datos s3 por Redshift ya que este servicio permite la creación de un data warehouse y el análisis de datos en tiempo real.
+arquitectura propuesta? Cambiaría el almacenamiendo de datos s3 por Redshift ya que este servicio permite el análisis de datos en tiempo real.
