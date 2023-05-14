@@ -50,7 +50,9 @@ se crea el crawler, que apunta los bucket en donde se almacenaron los datos. En 
 
 El paso siguiente es crear la ETL jobs, en el que se harán las transformaciones necesarias para tener la data limpia y lista.
 
-![Crawlers](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Crawlers.png)
+![ETL Bank](https://github.com/manuelarr03/NequiTestDataEngineer/blob/877741b0344f03b37e7f915512b296186290e331/ELT%20job%20bank.png)
+
+En este job se procesa la tabla *kg_data_bank* haciendo cambio de formatos en fechas y creando una nueva variable *Edad* calculada en un nodo de SQL Query a partir de la variable *CustomerDOB* 
 
 Se cambian los formatos de fecha y se eliminan duplicados
 * se guarda la data proceesada en un bucket de s3 parquetisada, se define este formato ya que por ser comprimido se ahorran costos
