@@ -27,7 +27,9 @@ Para el diseño de la arquitectura se usará AWS con los servicios de *Amazon s3
 
 ![Arquitectura](https://github.com/manuelarr03/NequiTestDataEngineer/blob/1298a08c9ac9c8d8f29492ec6a6dbec5fbf28c74/Arquitectura.png)
 
-La frecuencia de axtualización depende del uso de la data. Para la información transaccional es posible que se necesite identificar en tiempo real las transacciones ya que esto permitiría monitorear transacciones sospechosas de fraude. 
+disponiilidad de la información, costos por usabilidad, escalabilidad el mismo se autogestiona para tener una mejor 
+
+La frecuencia de actualización depende del uso de la data. Para la información bancaria es posible que se necesite identificar en tiempo real las transacciones ya que esto permitiría monitorear transacciones sospechosas de fraude. 
 En le caso de la data de música, la frecuencia de actualización podría ser cada semana para sacar resumenes, top 10 y segmentaciones periodicamente.
 
 ## Paso 4: Ejecutar la ETL
@@ -46,13 +48,17 @@ se crea el crawler, que apunta los bucket en donde se almacenaron los datos. En 
 
 ![Crawlers](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Crawlers.png)
 
+El paso siguiente es crear la ETL jobs, en el que se harán las transformaciones necesarias para tener la data limpia y lista.
+
+![Crawlers](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Crawlers.png)
+
 Se cambian los formatos de fecha y se eliminan duplicados
 * se guarda la data proceesada en un bucket de s3 parquetisada, se define este formato ya que por ser comprimido se ahorran costos
 ## Paso 5: Completar la redacción del proyecto
 
 El objetivo del proyecto es la construcción de un modelo y una arquitectura eficiente para que los datos puedan ser consumidos.  
 
-* Si los datos se incrementaran en 100x. sería buena opcion particionarlos ya que las consultas a bases particionadas son mucho más rápidas y efectivas, se tiene mayor escalabilidad en el almacenamiento y reduce costos por optimización de almacenamiento.
+* Si los datos se incrementaran en 100x. sería buena opcion particionar la data ya que las consultas a bases particionadas son mucho más rápidas y efectivas, se tiene mayor escalabilidad en el almacenamiento y reduce costos por optimización de almacenamiento. O utilizar el servicio de AWS Redshift que permite almacenar y analizar grandes cantidades de datos. 
 
 * Si se requiere hacer analítica en tiempo real, ¿cuales componentes cambiaria a su
 arquitectura propuesta? Cambiaría el almacenamiendo de datos s3 por Redshift ya que este servicio permite la creación de un data warehouse y el análisis de datos en tiempo real.
