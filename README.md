@@ -34,14 +34,14 @@ En le caso de la data de música, la frecuencia de actualización podría ser ca
 
 Primero se guardan los datos en buckets de s3, uno para cada fuente:
 
-![Buckets](https://github.com/manuelarr03/NequiTestDataEngineer/blob/261dbb8dcb146cff66c6b14c6dc393eb7a61e46b/Buckets.png)
+![Buckets](https://github.com/manuelarr03/NequiTestDataEngineer/blob/5f30f8db96c0be797c5041e09e172a9c21c6c8a8/Buckets.png)
 
 En Glue - Databases se crean las bases de datos: *db-banks* y *db-songs*, una para cada fuente de información.
 
 
 ![Databases](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Databases.png)
 
-se crea el crawler, que apunta los bucket en donde se almacenaron los datos. En la base de datos *db-banks* se almacena la tabla *kg_data_bank* y en *db-songs* se almacenan las tablas *music_info* y *user_listening*.
+se crea el crawler, que apunta los bucket en donde se almacenaron los datos. En la base de datos *db-banks* se almacena la estructura de la tabla *kg_data_bank* y en *db-songs* se almacenan las estructuras de las tablas *music_info* y *user_listening*.
 
 
 ![Crawlers](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Crawlers.png)
