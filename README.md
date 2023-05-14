@@ -1,14 +1,14 @@
 # NequiTestDataEngineer
 ## Paso 1: Captura de datos
 
-**Base de datos 1:** 'bank_transactions.csv' tomado de https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation 
+**Base de datos 1:** *bank_transactions.csv* tomado de https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation 
 Este archivo contiene las transacciones realizadas por al menos 800 mil clientes de un banco en la India. Los datos contienen información detallada de cada transacción como el identificador, la fecha de la transacción, el saldo y algunos datos adicionales del cliente como fecha de nacimiento, genero y ubicación.
 
 Esta base de datos puede ser usada para segmentar los clientes según su perfil y comportamiento, identifficar posibles transacciones fraudulentas y/o predecir cantidad de transacciones en un determinado período de tiempo.
 
-*Base de datos 2:* 'Music_info.csv' y 'User_Listening_History.csv' tomado de https://www.kaggle.com/datasets/undefinenull/million-song-dataset-spotify-lastfm?select=Music+Info.csv 
+**Base de datos 2:** *Music_info.csv* y *User_Listening_History.csv* tomado de https://www.kaggle.com/datasets/undefinenull/million-song-dataset-spotify-lastfm?select=Music+Info.csv 
 
-la primera BDD 'Music_info' continete información detallada de algunas canciones de spotify como el nombre, el artista, duración de la canción, genero y otras características. En la segunda BDD 'User_Listening_History' encontramos el identificador de la canción, el usuario y un conteo de reproducciones.
+la primera BDD *Music_info* continete información detallada de algunas canciones de spotify como el nombre, el artista, duración de la canción, genero y otras características. En la segunda BDD *User_Listening_History* encontramos el identificador de la canción, el usuario y un conteo de reproducciones.
 Con esta información podemos identificar cuál es el TOP de canciones más escuchadas en general y por usuario, también podemos segmentar por genero y artista. 
 
 ## Paso 2: Explorar y evaluar los datos, el EDA.
@@ -21,7 +21,7 @@ Para este paso se decidió crear dos modelos de datos para cada base de datos ya
 
 ![Diagrama de bases de datos .png](https://github.com/manuelarr03/NequiTestDataEngineer/blob/261dbb8dcb146cff66c6b14c6dc393eb7a61e46b/Diagrama%20de%20bases%20de%20datos%20.png)
 
-Para el primer modelo tenemos la base de datos 'bank_transactions'. Para el segundo modelo, tenemos las bases 'Music_info' y 'User_Listening_History' que se relacionan entre sí por la variable 'track_id' en una relación varios a uno. 
+Para el primer modelo tenemos la base de datos *bank_transactions*. Para el segundo modelo, tenemos las bases *Music_info* y *User_Listening_History* que se relacionan entre sí por la variable *track_id* en una relación varios a uno. 
 
 Para el diseño de la arquitectura se usará AWS con los servicios de *Amazon s3*, para almacenamiendo de los datos crudos y procesados, *AWS Glue*, para la preparación de los datos y llevar control de la ETL y *Athena*, para hacer los respectivos analisis interactivos. Finalmente, cuando los datos estén procesados, se hará uso de herramientas como Quicksight o Power BI con conexiones directas a S3 o por ODBC con Athena.
 
@@ -36,7 +36,7 @@ Primero se guardan los datos en buckets de s3, uno para cada fuente:
 
 ![Buckets](https://github.com/manuelarr03/NequiTestDataEngineer/blob/261dbb8dcb146cff66c6b14c6dc393eb7a61e46b/Buckets.png)
 
-se crea el crawler, que apunta los bucket en donde se almacenaron los datos, y la base de datos 'db-banks' en la que se almacena la tabla 'kg_data_bank' y 'db-songs' en la que se almacenan las tablas 'music_info' y 'user_listening' ( para cada fuente de datos se crea una base de datos ya que no tienen una relacion entre si)
+se crea el crawler, que apunta los bucket en donde se almacenaron los datos, y la base de datos *db-banks* en la que se almacena la tabla *kg_data_bank* y *db-songs* en la que se almacenan las tablas *music_info* y *user_listening* ( para cada fuente de datos se crea una base de datos ya que no tienen una relacion entre si)
 
 Se cambian los formatos de fecha y se eliminan duplicados
 * se guarda la data proceesada en un bucket de s3 parquetisada, se define este formato ya que por ser comprimido se ahorran costos
