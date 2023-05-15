@@ -35,11 +35,11 @@ En el caso de la data de música, la frecuencia de actualización podría ser ca
 
 ## Paso 4: Ejecutar la ETL
 
-Primero se guardan los datos en buckets de s3, uno para cada fuente:
+Primero se guardan los datos en buckets de s3, uno para cada fuente de información.
 
 ![Buckets](https://github.com/manuelarr03/NequiTestDataEngineer/blob/5f30f8db96c0be797c5041e09e172a9c21c6c8a8/Buckets.png)
 
-En Glue - Databases se crean las bases de datos: *db-banks* y *db-songs*, una para cada fuente de información.
+En Glue - Databases se crean las bases de datos: *db-banks* y *db-songs*.
 
 
 ![Databases](https://github.com/manuelarr03/NequiTestDataEngineer/blob/c65aff933f9184c269fdc4120f0e8cd02df1b352/Databases.png)
