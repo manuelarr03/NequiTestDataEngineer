@@ -2,13 +2,14 @@
 ## Paso 1: Captura de datos
 
 **Base de datos 1:** *bank_transactions.csv* tomado de https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation 
+
 Este archivo contiene las transacciones realizadas por al menos 800 mil clientes de un banco en la India. Los datos contienen información detallada de cada transacción como el identificador, la fecha de la transacción, el saldo y algunos datos adicionales del cliente como fecha de nacimiento, género y ubicación.
 
 Esta base de datos puede ser usada para segmentar los clientes según su perfil y comportamiento, identificar posibles transacciones fraudulentas y/o predecir cantidad de transacciones en un determinado período de tiempo.
 
 **Base de datos 2:** *Music_info.csv* y *User_Listening_History.csv* tomado de https://www.kaggle.com/datasets/undefinenull/million-song-dataset-spotify-lastfm?select=Music+Info.csv 
 
-la primera BDD *Music_info* contiene información detallada de algunas canciones de Spotify como el nombre, el artista, duración de la canción, género y otras características. En la segunda BDD *User_Listening_History* encontramos el identificador de la canción, el usuario y un conteo de reproducciones.
+la primera base *Music_info* contiene información detallada de algunas canciones de Spotify como el nombre, el artista, duración de la canción, género y otras características. En la segunda BDD *User_Listening_History* encontramos el identificador de la canción, el usuario y un conteo de reproducciones.
 Con esta información podemos identificar cuál es el TOP de canciones más escuchadas en general y por usuario, también podemos segmentar por género y artista. 
 
 ## Paso 2: Explorar y evaluar los datos, el EDA.
