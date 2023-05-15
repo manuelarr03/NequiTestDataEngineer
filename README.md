@@ -28,7 +28,7 @@ Para el diseño de la arquitectura se usará AWS con los servicios de *Amazon s3
 
 ![Arquitectura](https://github.com/manuelarr03/NequiTestDataEngineer/blob/1298a08c9ac9c8d8f29492ec6a6dbec5fbf28c74/Arquitectura.png)
 
-### FLATA !!!!!!Disponibilidad poniilidad de la información, costos por usabilidad, escalabilidad el mismo se autogestiona para tener una mejor 
+Se decide usar estas herramientas ya que AWS es altamente escalable, el mismo se autogestiona para tener un mejor rendimiento, se paga por los recursos utilizados, tiene un porcentaje muy alto de disponibilidad, entre otros.
 
 La frecuencia de actualización depende del uso de la data. Para la información bancaria es posible que se necesite identificar en tiempo real las transacciones ya que esto permitiría monitorear transacciones sospechosas de fraude. 
 En el caso de la data de música, la frecuencia de actualización podría ser cada semana para sacar resúmenes, top 10 y segmentaciones periódicamente.
